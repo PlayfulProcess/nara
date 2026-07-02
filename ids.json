@@ -1,3 +1,9 @@
 {
-  "wheel-of-the-year": "f8153f6e-d863-4a7f-9d6e-9213f7865f3d"
+  "_note": "Slug -> recursive.eco grammar UUID (the deckId) for the Nara channel. Used by recursive.eco to bind repo grammars to their live rows and to build per-deck links (open/read = https://flow.recursive.eco/play?id=<id>). _public_now lists the slugs that are is_public=true on recursive.eco (only public grammars import as channel members). Keep this updated when new grammars are created. Mirrors recursive-tarot/tarot/_eco_ids.json shape.",
+  "_public_now": [
+    "wheel-of-the-year"
+  ],
+  "ids": {
+    "wheel-of-the-year": "f8153f6e-d863-4a7f-9d6e-9213f7865f3d"
+  }
 }

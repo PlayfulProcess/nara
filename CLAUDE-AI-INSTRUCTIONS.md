@@ -44,7 +44,11 @@ point to journal, not a thing to attempt.
 - `course/00`–`06` + `course/README.md` — "From Zero to Your First Altar", the beginner course
   this repo was born from. The course is the project's centerpiece.
 - `journal/2026-07-02.md` — founding decisions + the Brazil-trip test plan.
-- `grammars/wheel-of-the-year.json` — the first grammar seed (also live, UUID above).
+- `grammars/wheel-of-the-year/grammar.json` — the first grammar seed (also live, UUID above).
+  Layout is `grammars/<slug>/grammar.json` (matches recursive-tarot, so recursive.eco's channel
+  import + GitHub→app sync work). Each grammar carries `_recursive_eco_url` (its live app link).
+- `recursive-eco.json` — the channel manifest (channel identity + grammar paths + `ids.json` map).
+  This is what makes recursive.eco import the repo as the **nara** channel.
 
 **Decided (don't re-litigate):**
 - Two-layer item shape: sky layer (facts, hedged, hemisphere-honest) strictly separated from

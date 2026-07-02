@@ -1,0 +1,24 @@
+{
+  "_note": "Channel manifest for recursive.eco. Makes this repo self-describing: recursive.eco imports it as a channel by reading this file from raw.githubusercontent.com/PlayfulProcess/nara/main/recursive-eco.json. Declares the channel identity (rendered as a channel-document, document_data.is_channel=true), where its grammars live (grammars/<slug>/grammar.json), and the slug->UUID map (ids.json). Membership lives in `tools` (channel_slug). Mirrors recursive-tarot/recursive-eco.json. See recursive-eco/docs/DESIGN-import-channel-from-github.md.",
+  "schema_version": 1,
+  "channel": {
+    "slug": "nara",
+    "name": "Nara — The Human-Subjective Sky",
+    "type": "repo",
+    "icon": "🌗",
+    "gradient": "from-amber-50 to-orange-100 dark:from-amber-950 dark:to-orange-900",
+    "description": "The tropical zodiac read honestly — a human frame laid over the year, anchored to the equinoxes and solstices, not the stars. Educational and reflective, never predictive.",
+    "landing_url": null,
+    "hero": {
+      "title": "Nara — The Human-Subjective Sky",
+      "subtitle": "The tropical wheel of the year as an honest human frame — the astronomy is real, the meanings are ours to hold lightly.",
+      "body_md": "Nara reframes tropical astrology as what it actually is: a record of the year as lived from Earth, light returning and light leaving. No prediction, no determinism — an invitation to look at your own life, never a verdict about it.\n\nSibling of Kali · Paradevi (the objective deep sky); together they form Trika. Built in the open and bound to its GitHub repo — fork it, correct it, or reflect with it."
+    }
+  },
+  "grammars": {
+    "paths": ["grammars/*/grammar.json"],
+    "id_map": "ids.json"
+  },
+  "maintainers": ["pp@playfulprocess.com"],
+  "default_branch": "main"
+}
