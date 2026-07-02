@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>From Zero to Your First Altar — Nara</title>
+<meta name="description" content="A course: build a grammar, a repo, and a living altar on recursive.eco using only claude.ai — no coding." />
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+  /* Nara palette — twilight sky (dark ink) + dawn gold accent. Layout mirrors
+     recursive-tarot's course-viewer (sticky sidebar + content + mobile TOC),
+     recolored for the sky/mirror project. */
+  :root{
+    --bg:#f6f5fb; --panel:#ffffff; --line:#e7e4f0;
+    --ink:#1c1830; --mut:#6b6580; --accent:#7c5cbf; --accent-soft:#efeaf9;
+    --gold:#b8912f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  a{color:var(--accent)}
+  header.top{background:linear-gradient(180deg,#161226,#241d3d);color:#efeaf9;padding:26px 20px;text-align:center}
+  header.top .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;opacity:.7;font-family:system-ui,sans-serif}
+  header.top h1{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:normal;margin:.35rem 0}
+  header.top p{opacity:.8;font-size:.95rem;max-width:52ch;margin:0 auto}
+  .wrap{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:280px 1fr;gap:32px;padding:28px 20px}
+  /* sidebar */
+  .sidebar{position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow-y:auto}
+  .nav{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}
+  .nav h3{font-family:system-ui,sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:12px}
+  .nav a{display:block;text-decoration:none;color:var(--mut);padding:9px 12px;border-radius:8px;border-left:3px solid transparent;font-size:.95rem;transition:.15s;font-family:system-ui,sans-serif}
+  .nav a .n{display:inline-block;width:1.5em;color:var(--gold);font-weight:600}
+  .nav a:hover{background:var(--accent-soft);color:var(--ink)}
+  .nav a.active{background:var(--accent-soft);color:var(--accent);border-left-color:var(--accent);font-weight:600}
+  .nav a .dur{float:right;font-size:.72rem;color:var(--mut);opacity:.7;margin-top:.2em}
+  /* content */
+  .content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:clamp(24px,4vw,48px);min-width:0}
+  .content .lead{color:var(--mut);font-style:italic;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:24px}
+  .content h1{font-size:clamp(1.6rem,3.6vw,2.2rem);font-weight:normal;margin:0 0 .2em}
+  .content h2{font-size:1.35rem;font-weight:normal;color:var(--ink);margin:1.8em 0 .5em;padding-top:.3em;border-top:1px solid var(--line)}
+  .content h3{font-size:1.1rem;margin:1.4em 0 .4em}
+  .content p{margin:0 0 1em}
+  .content ul,.content ol{margin:0 0 1em 1.4em}
+  .content li{margin-bottom:.4em}
+  .content code{background:var(--accent-soft);padding:.12em .4em;border-radius:4px;font-size:.9em;font-family:ui-monospace,Menlo,monospace}
+  .content pre{background:#161226;color:#efeaf9;padding:16px;border-radius:10px;overflow-x:auto;margin:0 0 1em}
+  .content pre code{background:none;color:inherit;padding:0}
+  .content img{max-width:100%;border-radius:10px;border:1px solid var(--line);margin:1em 0;display:block}
+  .content blockquote{border-left:3px solid var(--gold);padding:.3em 1em;margin:0 0 1em;color:var(--mut);background:#faf8f2}
+  .content a{border-bottom:1px solid var(--accent-soft)}
+  .pager{display:flex;justify-content:space-between;gap:12px;margin-top:36px;padding-top:20px;border-top:1px solid var(--line)}
+  .pager a{flex:1;text-decoration:none;padding:12px 16px;border:1px solid var(--line);border-radius:10px;font-family:system-ui,sans-serif;font-size:.9rem;color:var(--ink);transition:.15s}
+  .pager a:hover{background:var(--accent-soft);border-color:var(--accent)}
+  .pager a.next{text-align:right}
+  .pager a small{display:block;color:var(--mut);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+  .pager a.disabled{visibility:hidden}
+  /* mobile TOC */
+  .toc-btn{display:none;position:fixed;bottom:20px;left:16px;width:52px;height:52px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:22px;box-shadow:0 4px 14px rgba(124,92,191,.45);z-index:50;cursor:pointer}
+  .toc-overlay{display:none;position:fixed;inset:0;background:rgba(20,16,36,.5);z-index:45}
+  @media(max-width:820px){
+    .wrap{grid-template-columns:1fr}
+    .sidebar{position:static;max-height:none}
+    .sidebar .nav{display:none}
+    .sidebar.open .nav{display:block;position:fixed;top:0;left:0;bottom:0;width:82%;max-width:320px;z-index:50;border-radius:0;overflow-y:auto}
+    .sidebar.open .toc-overlay{display:block}
+    .toc-btn{display:flex;align-items:center;justify-content:center}
+  }
+  footer{text-align:center;color:var(--mut);font-size:.82rem;padding:24px;font-family:system-ui,sans-serif}
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="eyebrow">A Nara course · recursive.eco</div>
+    <h1>From Zero to Your First Altar</h1>
+    <p>Build a grammar, a repo, and a living altar using only claude.ai — no coding. Two manual steps; everything else is a conversation.</p>
+  </header>
+
+  <div class="wrap">
+    <aside class="sidebar" id="sidebar">
+      <div class="toc-overlay" id="tocOverlay"></div>
+      <nav class="nav">
+        <h3>Chapters</h3>
+        <div id="navList"></div>
+      </nav>
+    </aside>
+    <main class="content" id="content">
+      <p class="lead">Loading the course…</p>
+    </main>
+  </div>
+
+  <button class="toc-btn" id="tocBtn" aria-label="Chapters">☰</button>
+  <footer>PlayfulProcess · <a href="https://github.com/PlayfulProcess/nara">nara on GitHub</a> · educational &amp; study purposes only</footer>
+
+<script>
+// Ordered chapter slugs (files sit beside this page). Titles/descriptions are
+// read from each file's frontmatter, so adding a chapter = add its slug here.
+const CHAPTERS = [
+  '00-what-you-are-building',
+  '01-fork-the-template',
+  '02-claude-account',
+  '03-the-two-manual-steps',
+  '04-your-first-grammar',
+  '05-the-repo-discipline',
+  '06-offer-and-share',
+];
+const meta = {}; // slug -> {title, description, duration, body}
+
+function parseFrontmatter(raw){
+  const m = raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n?([\s\S]*)$/);
+  if(!m) return {fm:{}, body:raw};
+  const fm = {};
+  m[1].split('\n').forEach(line=>{
+    const i = line.indexOf(':');
+    if(i<0) return;
+    const k = line.slice(0,i).trim();
+    let v = line.slice(i+1).trim().replace(/^["']|["']$/g,'');
+    fm[k]=v;
+  });
+  return {fm, body:m[2]};
+}
+
+async function loadAll(){
+  await Promise.all(CHAPTERS.map(async slug=>{
+    try{
+      const r = await fetch(slug + '.mdx');
+      const raw = await r.text();
+      const {fm, body} = parseFrontmatter(raw);
+      meta[slug] = {title: fm.title || slug, description: fm.description || '', duration: fm.duration || '', body};
+    }catch(e){ meta[slug] = {title: slug, description:'', duration:'', body:'*Could not load this chapter.*'}; }
+  }));
+  buildNav();
+  const start = location.hash.replace('#','');
+  render(CHAPTERS.includes(start) ? start : CHAPTERS[0]);
+}
+
+function buildNav(){
+  const list = document.getElementById('navList');
+  list.innerHTML = CHAPTERS.map((slug,i)=>{
+    const m = meta[slug];
+    const dur = m.duration ? `<span class="dur">${m.duration} min</span>` : '';
+    return `<a href="#${slug}" data-slug="${slug}"><span class="n">${String(i).padStart(2,'0')}</span>${m.title}${dur}</a>`;
+  }).join('');
+  list.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ closeToc(); }));
+}
+
+function render(slug){
+  const m = meta[slug]; if(!m) return;
+  const idx = CHAPTERS.indexOf(slug);
+  // rewrite bare images/<name> refs to sit beside this page (course/images/…)
+  const body = m.body.replace(/\]\(images\//g, '](images/');
+  const prev = idx>0 ? CHAPTERS[idx-1] : null;
+  const next = idx<CHAPTERS.length-1 ? CHAPTERS[idx+1] : null;
+  const pager = `<div class="pager">
+    <a class="prev ${prev?'':'disabled'}" href="#${prev||''}">${prev?`<small>← Previous</small>${meta[prev].title}`:''}</a>
+    <a class="next ${next?'':'disabled'}" href="#${next||''}">${next?`<small>Next →</small>${meta[next].title}`:''}</a>
+  </div>`;
+  document.getElementById('content').innerHTML =
+    (m.description?`<p class="lead">${m.description}</p>`:'') + marked.parse(body) + pager;
+  document.querySelectorAll('#navList a').forEach(a=>a.classList.toggle('active', a.dataset.slug===slug));
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(location.hash!=='#'+slug) history.replaceState(null,'','#'+slug);
+}
+
+// mobile TOC
+const sidebar = document.getElementById('sidebar');
+function closeToc(){ sidebar.classList.remove('open'); }
+document.getElementById('tocBtn').addEventListener('click',()=>sidebar.classList.toggle('open'));
+document.getElementById('tocOverlay').addEventListener('click',closeToc);
+
+window.addEventListener('hashchange',()=>{
+  const s = location.hash.replace('#','');
+  if(CHAPTERS.includes(s)) render(s);
+});
+loadAll();
+</script>
+</body>
+</html>
