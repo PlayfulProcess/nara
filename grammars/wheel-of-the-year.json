@@ -1,0 +1,306 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "date": "2026-07-02",
+        "note": "Original creator — Nara seed grammar: the tropical wheel of the year as a human-subjective frame"
+      }
+    ]
+  },
+  "name": "Nara — The Wheel of the Year",
+  "description": "The tropical zodiac read honestly: twelve 30-degree slices of the year measured from the March equinox, plus the four hinges (equinoxes and solstices) that anchor them. This grammar is for education and reflection only — it claims no authority over anyone's character or future, and it treats every sign meaning as an inherited human convention, not a fact about stars or persons. Nara is the human-subjective sky, sibling of Kali and Paradevi (the dark and light of the physical cosmos); together the three form Trika. The astronomy here is real; the meanings are ours to hold lightly.",
+  "grammar_type": "custom",
+  "creator_name": "PlayfulProcess",
+  "tags": ["nara", "tropical-astrology", "seasons", "wheel-of-the-year", "reflection"],
+  "_notes": "Seed grammar for the nara project. Four hinge items (metadata.hinge) come first, then the twelve signs in zodiacal order. Degrees in metadata.season_degrees are ecliptic longitude measured from the March equinox (0° Aries). Sign meanings are always attributed to the Western tropical tradition, never asserted. Sources link the Ashmand translation of Ptolemy's Tetrabiblos on sacred-texts.com (public domain). Seasonal language is Northern-hemisphere by convention; the Southern-hemisphere inversion is named deliberately. image_url intentionally absent — images come later.",
+  "items": [
+    {
+      "id": "march-equinox",
+      "name": "The March Equinox — 0° Aries",
+      "sort_order": 0,
+      "category": "hinge",
+      "sections": {
+        "Description": "Around March 20 the Sun, seen from Earth, crosses the celestial equator heading north: its declination passes through zero, and day and night are nearly equal everywhere on the planet. This is a real geometric event caused by Earth's axial tilt of about 23.4 degrees, not by anything the stars do. The tropical zodiac takes this crossing as its zero point — 0° Aries — so the whole wheel is anchored to Earth's seasons, not to constellations. In the Northern hemisphere this hinge opens spring; in the Southern hemisphere the very same moment opens autumn.",
+        "Reflection": "Somewhere in your year there is a morning when the balance visibly tips and something new becomes possible. When light and dark stand equal, what are you ready to begin — and what are you equally ready to let ripen toward its ending? Notice, too, that half the world meets this exact moment as a harvest: the same sky, two honest stories.",
+        "Source": "Ptolemy opens his account of the year at the spring equinox — Tetrabiblos, Book I, ch. XII, 'The Annual Seasons' (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb15.htm"
+      },
+      "keywords": ["equinox", "balance", "beginning", "axial tilt", "zero point"],
+      "metadata": {
+        "hinge": true,
+        "season_degrees": "0",
+        "approx_date": "March 20"
+      }
+    },
+    {
+      "id": "june-solstice",
+      "name": "The June Solstice — 0° Cancer",
+      "sort_order": 1,
+      "category": "hinge",
+      "sections": {
+        "Description": "Around June 20–21 the Sun reaches its greatest northern declination, about +23.4 degrees, standing directly overhead at the Tropic of Cancer — which is how that line on the map got its name. The Sun's apparent longitude along the ecliptic reaches 90 degrees from the March equinox: 0° Cancer in the tropical wheel. It is the longest day of the year in the Northern hemisphere and the shortest in the Southern, after which the Sun's daily arc begins, very slowly, to turn back.",
+        "Reflection": "There is a fullness that is also a turning point: the moment of most light is the moment the light begins to recede. Where in your life are you at maximum — and can you enjoy the height of it without needing it to keep climbing? If you live south of the equator, this same hinge is your deepest dark, and the turning is toward light; either way, the invitation is trust in the turn.",
+        "Source": "Ptolemy calls Cancer a tropical (turning) sign because the Sun turns back at this point — Tetrabiblos, Book I, ch. XIV (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb17.htm"
+      },
+      "keywords": ["solstice", "longest day", "culmination", "turning", "fullness"],
+      "metadata": {
+        "hinge": true,
+        "season_degrees": "90",
+        "approx_date": "June 20-21"
+      }
+    },
+    {
+      "id": "september-equinox",
+      "name": "The September Equinox — 0° Libra",
+      "sort_order": 2,
+      "category": "hinge",
+      "sections": {
+        "Description": "Around September 22–23 the Sun crosses the celestial equator again, this time heading south, and day and night briefly stand equal across the whole Earth. The Sun's ecliptic longitude reaches 180 degrees — 0° Libra, the exact opposite point of the wheel from the March equinox. In the Northern hemisphere this begins autumn, the descent into the dark half of the year; in the Southern hemisphere it opens spring. The mechanics are the same axial tilt, viewed from the other side of the orbit.",
+        "Reflection": "This is the second moment of balance, and it faces the other way: equality on the way down into darkness rather than up into light. What have you gathered this year that is ready to be weighed, shared, or released? And what would it mean to meet the coming dark not as a loss but as the other half of the same wheel that gave you summer?",
+        "Source": "Ptolemy's description of autumn among the four seasons — Tetrabiblos, Book I, ch. XII, 'The Annual Seasons' (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb15.htm"
+      },
+      "keywords": ["equinox", "harvest", "balance", "descent", "release"],
+      "metadata": {
+        "hinge": true,
+        "season_degrees": "180",
+        "approx_date": "September 22-23"
+      }
+    },
+    {
+      "id": "december-solstice",
+      "name": "The December Solstice — 0° Capricorn",
+      "sort_order": 3,
+      "category": "hinge",
+      "sections": {
+        "Description": "Around December 21 the Sun reaches its greatest southern declination, about −23.4 degrees, standing overhead at the Tropic of Capricorn. Its ecliptic longitude reaches 270 degrees — 0° Capricorn. This is the shortest day and longest night of the Northern year, and the moment the light begins its return; south of the equator it is midsummer's peak. Human calendars have clustered festivals of returning light around this hinge for thousands of years, because the turn is real and observable: each day after it, the Sun climbs a little higher.",
+        "Reflection": "In the deepest dark, the year quietly changes direction. What in your life feels like a long night right now — and can you locate the small, almost invisible evidence that the turn has already happened? For those in the Southern hemisphere this is instead the blaze of high summer; wherever you stand, the wheel promises only this: nothing stays at its extreme.",
+        "Source": "Ptolemy calls Capricorn a tropical (turning) sign, twin of Cancer — Tetrabiblos, Book I, ch. XIV (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb17.htm"
+      },
+      "keywords": ["solstice", "longest night", "return of light", "threshold", "endurance"],
+      "metadata": {
+        "hinge": true,
+        "season_degrees": "270",
+        "approx_date": "December 21"
+      }
+    },
+    {
+      "id": "aries",
+      "name": "Aries — The First Thirty Days",
+      "sort_order": 4,
+      "category": "fire",
+      "sections": {
+        "Description": "Aries is the first 30-degree segment of the tropical wheel, roughly March 20 to April 19, beginning at the March equinox itself. It is worth saying plainly: this sign is not the constellation Aries. Because Earth's axis slowly wobbles — precession, about one degree every 72 years — the equinox point has drifted some 24 degrees since the zodiac was standardized, and tropical 0° Aries now lies against the stars of Pisces. A sign is a slice of the season, not a patch of stars. In the Western tropical tradition Aries is assigned the element fire, the cardinal (initiating) mode, and Mars as its classical ruler — conventions inherited from Hellenistic astrologers, describing the year's abrupt ignition after the equinox.",
+        "Reflection": "Consider the earliest days of any spring — in a year, a project, a relationship. What does the first push feel like in you, the energy that starts things before they are guaranteed? This is not a claim about who you are; it is an invitation to notice how beginnings actually move through your life, and what they cost and give.",
+        "Source": "Ptolemy lists Aries among the equinoctial signs — Tetrabiblos, Book I, ch. XIV (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb17.htm"
+      },
+      "keywords": ["beginning", "ignition", "first push", "spring", "precession"],
+      "metadata": {
+        "season_degrees": "0–30",
+        "approx_dates": "March 20 – April 19",
+        "modality": "cardinal",
+        "traditional_ruler": "Mars"
+      }
+    },
+    {
+      "id": "taurus",
+      "name": "Taurus — Rooting In",
+      "sort_order": 5,
+      "category": "earth",
+      "sections": {
+        "Description": "Taurus is the second slice of the wheel, degrees 30 to 60 from the March equinox, roughly April 20 to May 20 — mid-spring in the Northern hemisphere, when growth stops being a promise and becomes visible, edible, fragrant matter. In the Western tropical tradition Taurus is assigned the element earth, the fixed (sustaining) mode, and Venus as its classical ruler. Like every sign, it is a season-position, not a constellation: the meanings are a human vocabulary layered onto a slice of the year.",
+        "Reflection": "There is a phase after every beginning when the work is simply to stay: to water, to tend, to let roots thicken without rushing the fruit. What in your life is asking for that kind of steadiness right now? Notice what your senses tell you when you slow down enough to consult them.",
+        "Source": "The earthy triplicity as Ptolemy's tradition arranged it — Tetrabiblos, Book I, ch. XXI, 'The Triplicities' (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb24.htm"
+      },
+      "keywords": ["rooting", "steadiness", "senses", "tending", "mid-spring"],
+      "metadata": {
+        "season_degrees": "30–60",
+        "approx_dates": "April 20 – May 20",
+        "modality": "fixed",
+        "traditional_ruler": "Venus"
+      }
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini — The Air Fills with Voices",
+      "sort_order": 6,
+      "category": "air",
+      "sections": {
+        "Description": "Gemini spans degrees 60 to 90 of the wheel, roughly May 21 to June 20 — late spring, the run-up to the solstice, when in the Northern hemisphere daylight stretches long and the world is at its most talkative: birdsong, pollination, movement between flowering things. In the Western tropical tradition Gemini is assigned the element air, the mutable (adapting) mode, and Mercury as its classical ruler. These attributions are inherited convention, a way older astrologers gave language to the year's most connective stretch.",
+        "Reflection": "Think of the seasons in your life when everything wanted to be said, asked, exchanged — when curiosity ran ahead of conclusions. What conversations are open in you right now, and which two things inside you are still learning to talk to each other? Let this slice of the year stand for the pleasure of not yet deciding.",
+        "Source": "Mercury's houses, Gemini among them, in the traditional scheme — Tetrabiblos, Book I, ch. XX, 'Houses of the Planets' (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb23.htm"
+      },
+      "keywords": ["curiosity", "exchange", "movement", "conversation", "late spring"],
+      "metadata": {
+        "season_degrees": "60–90",
+        "approx_dates": "May 21 – June 20",
+        "modality": "mutable",
+        "traditional_ruler": "Mercury"
+      }
+    },
+    {
+      "id": "cancer",
+      "name": "Cancer — The Season Turns Home",
+      "sort_order": 7,
+      "category": "water",
+      "sections": {
+        "Description": "Cancer begins exactly at the June solstice — degrees 90 to 120, roughly June 21 to July 22. The Tropic of Cancer is named for this: when the naming happened, the Sun's northern turning point stood among those stars, though precession has long since carried the actual solstice Sun into other constellations — the sign keeps the season, not the stars. In the Western tropical tradition Cancer is assigned the element water, the cardinal mode, and the Moon as its classical ruler: the vocabulary the tradition chose for the year's turn from expansion toward interiority, the first sign of the descending light.",
+        "Reflection": "After the longest day, something in the year comes home to itself. What does home mean to you in this stretch of your life — a place, a body, a few people, a practice? Consider what you are protecting and nourishing right now, and whether it knows it is being held.",
+        "Source": "Ptolemy on the tropical signs, where the Sun turns — Tetrabiblos, Book I, ch. XIV (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb17.htm"
+      },
+      "keywords": ["home", "holding", "interiority", "nourishment", "turning"],
+      "metadata": {
+        "season_degrees": "90–120",
+        "approx_dates": "June 21 – July 22",
+        "modality": "cardinal",
+        "traditional_ruler": "Moon"
+      }
+    },
+    {
+      "id": "leo",
+      "name": "Leo — High Summer",
+      "sort_order": 8,
+      "category": "fire",
+      "sections": {
+        "Description": "Leo spans degrees 120 to 150, roughly July 23 to August 22 — the heart of Northern summer, when the Sun's heat is at its most established even as the days are already shortening. In the Western tropical tradition Leo is the house of the Sun itself, assigned the element fire and the fixed mode: the old astrologers gave the year's most radiant, settled stretch to the light's own sign. As with the whole wheel, this is inherited symbolism about a season, not a statement about anyone born within it.",
+        "Reflection": "Every year has a stretch where life simply shines — ripeness with nothing to prove. When have you let yourself be seen at full warmth, and what made that safe? Consider the difference between shining to be admired and shining because that is what the season does.",
+        "Source": "Leo as the Sun's house in the traditional scheme — Tetrabiblos, Book I, ch. XX, 'Houses of the Planets' (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb23.htm"
+      },
+      "keywords": ["radiance", "ripeness", "being seen", "warmth", "high summer"],
+      "metadata": {
+        "season_degrees": "120–150",
+        "approx_dates": "July 23 – August 22",
+        "modality": "fixed",
+        "traditional_ruler": "Sun"
+      }
+    },
+    {
+      "id": "virgo",
+      "name": "Virgo — The Harvest Discerns",
+      "sort_order": 9,
+      "category": "earth",
+      "sections": {
+        "Description": "Virgo spans degrees 150 to 180, roughly August 23 to September 22 — late Northern summer sliding toward the equinox, the season of harvest work: sorting grain from chaff, preserving what will keep, discarding what will not. In the Western tropical tradition Virgo is assigned the element earth, the mutable mode, and Mercury as its classical ruler. Ancient sky-lore pictured this stretch as a maiden holding an ear of wheat — a harvest image projected onto a harvest season, which is exactly how the whole zodiac vocabulary was built.",
+        "Reflection": "Harvest is not only gathering; it is judgment in the kindest sense — deciding what is worth carrying into winter. What in your life deserves that careful sorting right now? Consider one thing you could refine rather than replace, and one thing you could respectfully let go.",
+        "Source": "The particular natures assigned to the signs in Ptolemy's weather-lore — Tetrabiblos, Book II, ch. XII (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb42.htm"
+      },
+      "keywords": ["discernment", "harvest work", "refinement", "sorting", "craft"],
+      "metadata": {
+        "season_degrees": "150–180",
+        "approx_dates": "August 23 – September 22",
+        "modality": "mutable",
+        "traditional_ruler": "Mercury"
+      }
+    },
+    {
+      "id": "libra",
+      "name": "Libra — The Scales of the Year",
+      "sort_order": 10,
+      "category": "air",
+      "sections": {
+        "Description": "Libra begins at the September equinox — degrees 180 to 210, roughly September 23 to October 22. Its symbol, the scales, is the most transparent in the zodiac: it marks the moment day and night literally balance before tipping toward the dark. In the Western tropical tradition Libra is assigned the element air, the cardinal mode, and Venus as its classical ruler. The sign no longer coincides with the constellation Libra — precession has moved the equinox point — but the balance it names happens every year, on schedule, regardless of the stars behind the Sun.",
+        "Reflection": "Balance in the sky lasts a single day; balance in a life is something we keep renegotiating. Where are you weighing two goods against each other right now — solitude and company, honesty and kindness, holding on and letting go? Let the equinox stand for the act of weighing itself, done in the open air with another person if you can.",
+        "Source": "Ptolemy lists Libra among the equinoctial signs — Tetrabiblos, Book I, ch. XIV (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb17.htm"
+      },
+      "keywords": ["weighing", "relationship", "fairness", "equinox", "negotiation"],
+      "metadata": {
+        "season_degrees": "180–210",
+        "approx_dates": "September 23 – October 22",
+        "modality": "cardinal",
+        "traditional_ruler": "Venus"
+      }
+    },
+    {
+      "id": "scorpio",
+      "name": "Scorpio — The Descent Deepens",
+      "sort_order": 11,
+      "category": "water",
+      "sections": {
+        "Description": "Scorpio spans degrees 210 to 240, roughly October 23 to November 21 — deep Northern autumn, when leaves come down, light shortens noticeably, and the old agricultural year confronted decay, slaughter-month, and the composting of everything summer made. In the Western tropical tradition Scorpio is assigned the element water, the fixed mode, and Mars as its classical ruler. Many cultures placed their festivals of the dead in this very stretch of the year; the sign's inherited intensity is, at root, the season's.",
+        "Reflection": "There is a part of every year — and every life — where surfaces stop being enough and the compost does its quiet work. What are you ready to look at underneath the story you usually tell about it? This slice of the wheel invites depth without drama: what is decaying in your life that is actually feeding what comes next?",
+        "Source": "Mars's houses, Scorpio among them, in the traditional scheme — Tetrabiblos, Book I, ch. XX, 'Houses of the Planets' (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb23.htm"
+      },
+      "keywords": ["depth", "composting", "transformation", "the underneath", "late autumn"],
+      "metadata": {
+        "season_degrees": "210–240",
+        "approx_dates": "October 23 – November 21",
+        "modality": "fixed",
+        "traditional_ruler": "Mars"
+      }
+    },
+    {
+      "id": "sagittarius",
+      "name": "Sagittarius — Aiming Through the Dark",
+      "sort_order": 12,
+      "category": "fire",
+      "sections": {
+        "Description": "Sagittarius spans degrees 240 to 270, roughly November 22 to December 21 — the last stretch before the winter solstice, when Northern nights grow longest and, historically, communities turned to firelight, travel stories, and festivals that leaned toward the returning Sun. In the Western tropical tradition Sagittarius is assigned the element fire, the mutable mode, and Jupiter as its classical ruler — the tradition's language for a season that answers deepening darkness with widening horizons.",
+        "Reflection": "When the outer world contracts, something in us reaches farther: for meaning, for elsewhere, for the long view. What question are you aiming at right now that is bigger than this month's weather? Let this stretch of the year stand for honest aim — direction chosen and held loosely, without pretending to know where the arrow lands.",
+        "Source": "The natures the tradition assigned to the signs — Tetrabiblos, Book II, ch. XII (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb42.htm"
+      },
+      "keywords": ["aim", "horizon", "meaning", "journey", "firelight"],
+      "metadata": {
+        "season_degrees": "240–270",
+        "approx_dates": "November 22 – December 21",
+        "modality": "mutable",
+        "traditional_ruler": "Jupiter"
+      }
+    },
+    {
+      "id": "capricorn",
+      "name": "Capricorn — The Structure of Winter",
+      "sort_order": 13,
+      "category": "earth",
+      "sections": {
+        "Description": "Capricorn begins at the December solstice — degrees 270 to 300, roughly December 22 to January 19. The Tropic of Capricorn carries its name for the same historical reason as its northern twin: the solstice Sun once stood among those stars, before precession moved on — the line and the sign now remember a sky that has shifted. In the Western tropical tradition Capricorn is assigned the element earth, the cardinal mode, and Saturn as its classical ruler: the tradition's shorthand for the year's most stripped-down stretch, when what survives is what has structure.",
+        "Reflection": "Deep winter shows the bones of things — the bare tree's architecture, the budget of stored food, the commitments that hold when comfort is gone. What structure in your life is quietly carrying you through a lean season? Consider honoring it, and consider what one beam of it might need repair.",
+        "Source": "Ptolemy on Capricorn as a tropical sign at the Sun's southern turning — Tetrabiblos, Book I, ch. XIV (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb17.htm"
+      },
+      "keywords": ["structure", "endurance", "bare bones", "commitment", "deep winter"],
+      "metadata": {
+        "season_degrees": "270–300",
+        "approx_dates": "December 22 – January 19",
+        "modality": "cardinal",
+        "traditional_ruler": "Saturn"
+      }
+    },
+    {
+      "id": "aquarius",
+      "name": "Aquarius — The Long Thaw of Ideas",
+      "sort_order": 14,
+      "category": "air",
+      "sections": {
+        "Description": "Aquarius spans degrees 300 to 330, roughly January 20 to February 18 — midwinter's second half in the Northern hemisphere, when the cold holds but the light is measurably returning and planning for the new season begins. Its old image is the water-bearer pouring out a stream, which in Mediterranean climates matched the year's rains. In the Western tropical tradition Aquarius is assigned the element air, the fixed mode, and Saturn as its classical ruler — later astrologers added Uranus, a reminder that even the conventions keep being revised by the humans who carry them.",
+        "Reflection": "There is a season for thinking past the present arrangement — for imagining the garden while the ground is still frozen. What idea are you carrying for a community larger than yourself, and who else needs to hear it before it can live? Let this stretch stand for the patience of pouring: steady, impersonal, generous.",
+        "Source": "Saturn's houses, Aquarius among them, in the traditional scheme — Tetrabiblos, Book I, ch. XX, 'Houses of the Planets' (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb23.htm"
+      },
+      "keywords": ["imagination", "community", "pouring out", "returning light", "revision"],
+      "metadata": {
+        "season_degrees": "300–330",
+        "approx_dates": "January 20 – February 18",
+        "modality": "fixed",
+        "traditional_ruler": "Saturn"
+      }
+    },
+    {
+      "id": "pisces",
+      "name": "Pisces — The Year Dissolves Toward Spring",
+      "sort_order": 15,
+      "category": "water",
+      "sections": {
+        "Description": "Pisces is the final slice of the wheel, degrees 330 to 360, roughly February 19 to March 20, ending exactly where the wheel began: at the March equinox. It is the season of snowmelt and mud, when winter's forms dissolve back into the water that will feed spring. In the Western tropical tradition Pisces is assigned the element water, the mutable mode, and Jupiter as its classical ruler. There is a quiet irony worth naming here: because of precession, the equinox point — tropical 0° Aries — currently sits among the actual stars of Pisces, so the wheel's ending and beginning literally overlap in today's sky.",
+        "Reflection": "Endings that feed beginnings rarely announce themselves; they seep. What in your life is softening at the edges right now, losing its old shape so something can begin? Before the wheel turns, let yourself feel the whole year behind you as one continuous water — nothing wasted, everything carried forward.",
+        "Source": "The watery triplicity as the tradition arranged it — Tetrabiblos, Book I, ch. XXI, 'The Triplicities' (Ashmand translation, public domain): https://sacred-texts.com/astro/ptb/ptb24.htm"
+      },
+      "keywords": ["dissolving", "snowmelt", "completion", "continuity", "threshold"],
+      "metadata": {
+        "season_degrees": "330–360",
+        "approx_dates": "February 19 – March 20",
+        "modality": "mutable",
+        "traditional_ruler": "Jupiter"
+      }
+    }
+  ]
+}

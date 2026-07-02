@@ -1,0 +1,39 @@
+---
+id: 05-the-repo-discipline
+title: "The Repo Discipline"
+description: "Journal dumps, shared memory, and how a community actually contributes. The one habit that makes everything else compound."
+duration: 8
+author: PlayfulProcess
+date: 2026-07-02
+---
+
+# The Repo Discipline
+
+Chats forget. That is the one structural weakness of building by conversation: next week's chat knows nothing about today's decisions. The repo is the fix — and the fix is one habit.
+
+## The journal dump
+
+At the end of any working session where something happened, say:
+
+> "Write a journal entry to my repo at `journal/2026-07-15.md` — what we decided today, the grammar and its link, what's unfinished, and what the next session should do first."
+
+Claude writes it through the GitHub connector. That file is now permanent, public to your collaborators, and readable by every future chat. Which gives you the matching habit at the START of a session:
+
+> "Read the latest file in `journal/` in my repo and pick up where we left off."
+
+Two sentences, and your project has continuous memory across chats, devices, and months. This is the discipline the whole method rests on. Everything else in the repo — `research/` notes, `docs/` decisions — follows the same pattern: **if it mattered, it goes in a file; if it is only in the chat, it is already half lost.**
+
+The repo is also where honesty is auditable: your sources in `research/`, your reasoning in `journal/`. Anyone can check how the grammar was made. That is the point of an open home.
+
+## How a community contributes
+
+Once your project is public, other people can improve it without you giving anyone the keys. There are two doors, from gentle to standard:
+
+- **In the app.** On recursive.eco, someone can fork or copy your published grammar, make their change, and propose it back. You review and merge inside the app. No git anywhere.
+- **On GitHub.** Someone edits a file in your repo through GitHub's web editor (the pencil icon works on a phone) and GitHub turns it into a **pull request** — their proposed change, shown side by side with the original, waiting for you. You, as the admin of your repo, review and tap **Merge** if you accept.
+
+Both doors have the same shape: propose, review, merge. Nothing lands without the maintainer's yes, so nothing can be broken by a stranger — which is exactly what makes it safe to invite strangers.
+
+---
+
+**Do it now:** end today's session with your first journal dump. Ask Claude to write `journal/` today's date `.md` with what you built and what comes next — then open the file on GitHub with your own eyes to see that it is really there.

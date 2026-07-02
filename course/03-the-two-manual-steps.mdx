@@ -1,0 +1,56 @@
+---
+id: 03-the-two-manual-steps
+title: "The Two Manual Steps"
+description: "The only technical setup in the whole course: two connectors, two sign-ins. After this, everything is conversation."
+duration: 10
+author: PlayfulProcess
+date: 2026-07-02
+---
+
+# The Two Manual Steps
+
+This chapter is the entire technical setup of the method. Two connectors, plugged in once. After this, every remaining chapter is just talking.
+
+A **connector** gives Claude hands into another service. You will plug in two: one into recursive.eco (so it can build grammars in the live app) and one into GitHub (so it can read and write your repo).
+
+## Before you start
+
+- You need a **recursive.eco account**: go to [flow.recursive.eco](https://flow.recursive.eco) and sign in once (email sign-in; free, comes with a little AI credit). The first connector will ask you to log in with this account.
+- You need your **GitHub account** from chapter 1.
+- Do this on the claude.ai **website** (phone browser is fine).
+
+## Step A — the recursive.eco connector
+
+1. Open [claude.ai/settings/connectors](https://claude.ai/settings/connectors).
+2. Tap **Add custom connector**.
+3. Where it asks for the URL, paste exactly:
+
+   ```
+   https://flow.recursive.eco/api/mcp
+   ```
+
+4. Tap **Add**, then **Connect**. A recursive.eco sign-in opens — sign in with **your recursive.eco account** and authorize.
+5. You should see the connector listed as connected.
+
+What this gives Claude: the grammar toolkit — creating grammars and items, searching Wikipedia and Wikimedia Commons for public-domain images, generating images, publishing. You never call these tools yourself; you just ask for things and Claude picks them.
+
+**If it stalls:** the sign-in page usually means you were not yet logged in to recursive.eco — log in at [flow.recursive.eco](https://flow.recursive.eco) first, then retry **Connect**.
+
+## Step B — the GitHub connector
+
+1. On the same [connectors page](https://claude.ai/settings/connectors), find **GitHub** in the list of built-in connectors (no URL needed — it is first-party).
+2. Tap **Connect** and authorize with your GitHub account. When GitHub asks which repositories, grant access to your project repo (or all your repos, your choice).
+
+What this gives Claude: reading and writing files in your repo — your notes, your journal, your data. This is how the project remembers.
+
+## One habit that saves confusion
+
+Connectors are picked up **when a chat starts**. If you connect something mid-conversation and Claude cannot see it, do not fight it — just **start a new chat**. New chat, fresh hands.
+
+---
+
+**Do it now:** connect both, then start a NEW chat and type:
+
+> "Can you see my recursive.eco tools and my GitHub repo? List my grammars and the files in my repo."
+
+If it lists both (an empty grammar list is fine — you have not made one yet), the setup is finished forever. Everything from here is conversation.
