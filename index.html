@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nara — The Human-Subjective Sky</title>
+<meta name="description" content="The tropical zodiac read honestly — a human frame laid over the year. Part of the Trika family on recursive.eco." />
+<style>
+  :root{
+    --bg:#fbf7f0; --panel:#ffffff; --ink:#2a2320; --mut:#7a6f66;
+    --line:#ece2d6; --accent:#c1863b; --accent-ink:#8a5a1e;
+    --warm:#f4e6d0; --warm2:#efd9b8;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(1200px 400px at 50% -120px, var(--warm2), transparent 70%),
+      var(--bg);
+    color:var(--ink);
+    font:16px/1.65 ui-serif, Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent-ink); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:900px; margin:0 auto; padding:0 20px}
+  header{padding:64px 20px 8px; text-align:center}
+  .kicker{font:600 12px/1 ui-sans-serif,system-ui,sans-serif; letter-spacing:.22em; text-transform:uppercase; color:var(--accent-ink); opacity:.85}
+  h1{font-size:clamp(34px,7vw,54px); margin:.35em 0 .15em; letter-spacing:-.01em}
+  .tagline{font-style:italic; color:var(--mut); font-size:clamp(16px,3.4vw,20px); margin:0 auto; max-width:36ch}
+  .intro{max-width:64ch; margin:26px auto 0; color:#3a322d}
+  section{margin:44px 0}
+  h2{font:600 13px/1 ui-sans-serif,system-ui,sans-serif; letter-spacing:.16em; text-transform:uppercase; color:var(--mut); border-bottom:1px solid var(--line); padding-bottom:10px; margin:0 0 20px}
+  .grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:20px; display:flex; flex-direction:column; gap:8px; box-shadow:0 1px 0 rgba(120,90,50,.03)}
+  .card h3{margin:0; font-size:20px}
+  .card p{margin:0; color:var(--mut); font-size:14.5px; flex:1}
+  .actions{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
+  .btn{font:600 13px/1 ui-sans-serif,system-ui,sans-serif; padding:8px 12px; border-radius:999px; border:1px solid var(--warm2); background:var(--warm); color:var(--accent-ink); cursor:pointer}
+  .btn:hover{text-decoration:none; background:var(--warm2)}
+  .btn.primary{background:var(--accent-ink); color:#fff; border-color:var(--accent-ink)}
+  .trika{display:grid; gap:12px; grid-template-columns:1fr 1fr}
+  .trika .cell{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:16px}
+  .trika .cell b{display:block; font-family:ui-sans-serif,system-ui,sans-serif; font-size:13px; letter-spacing:.04em}
+  .muted{color:var(--mut); font-size:14px}
+  footer{border-top:1px solid var(--line); margin-top:56px; padding:26px 20px 60px; text-align:center; color:var(--mut); font:14px/1.6 ui-sans-serif,system-ui,sans-serif}
+  code{font:13px/1 ui-monospace,SFMono-Regular,Menlo,monospace; background:#f2e9dc; padding:2px 6px; border-radius:6px; color:var(--accent-ink)}
+  @media (max-width:560px){ .trika{grid-template-columns:1fr} header{padding-top:44px} }
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">The Trika family · recursive.eco</div>
+  <h1>Nara</h1>
+  <p class="tagline">The human-subjective sky — a tropical zodiac read honestly, as a human frame laid over the year.</p>
+</header>
+
+<div class="wrap">
+  <p class="intro">
+    Nara is a study project about tropical astrology, reframed as what it actually is: a record of the
+    year as lived from Earth. The tropical zodiac is anchored to the equinoxes and solstices — Earth's
+    seasons — not to the distant stars; because of precession, the signs no longer line up with the
+    constellations they were named after. Nara treats that as the honest starting point. The astronomy
+    here is real; the meaning is ours to hold lightly. <b>No prediction, no determinism</b> — an
+    invitation to look at your own life, never a verdict about it.
+  </p>
+
+  <section>
+    <h2>Grammars</h2>
+    <div class="grid" id="grammars">
+      <div class="card"><p class="muted">Loading grammars…</p></div>
+    </div>
+    <p class="muted" style="margin-top:14px">Every grammar opens in recursive.eco — the app renders the cards, study view, and (for Nara) an astrological frame. Nothing to install.</p>
+  </section>
+
+  <section>
+    <h2>The Trika architecture</h2>
+    <div class="trika">
+      <div class="cell"><b>Nara — this repo</b><br/>the ecliptic, the seasons, the tropical zodiac. The human-subjective sky: how the year looks and means from here.</div>
+      <div class="cell"><b><a href="https://github.com/PlayfulProcess/kali-paradevi">Kali · Paradevi →</a></b><br/>black holes, galaxies, the deep sky. The objective sky: real catalog objects, real data, a reflective layer on top.</div>
+    </div>
+    <p class="muted" style="margin-top:14px">Together, the subjective and objective skies form <b>Trika</b> — the metagrammar. The same moment, viewed two honest ways.</p>
+  </section>
+</div>
+
+<footer>
+  Built in the open on <a href="https://recursive.eco">recursive.eco</a> · <a href="https://github.com/PlayfulProcess/nara">source on GitHub</a> · educational &amp; reflective, never predictive.
+</footer>
+
+<script>
+  // Live grammar list from this repo's own ids.json (Pages serves it same-origin, so it works even
+  // though the repo is private). Known grammars get a nicer name + tagline; new ones fall back to a
+  // humanized slug, so the page auto-updates as grammars are added from the phone.
+  const META = {
+    "wheel-of-the-year": { name: "The Wheel of the Year", tag: "Twelve 30° slices of the year measured from the March equinox, plus the four hinges (equinoxes & solstices)." }
+  };
+  const APP = "https://flow.recursive.eco";
+  const LANDING = "https://recursive.eco";
+  const humanize = s => s.replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase());
+  function card(slug, uuid){
+    const m = META[slug] || {};
+    const name = m.name || humanize(slug);
+    const tag = m.tag || "";
+    const el = document.createElement("div");
+    el.className = "card";
+    el.innerHTML =
+      '<h3>'+name+'</h3>' +
+      (tag ? '<p>'+tag+'</p>' : '<p class="muted">A Nara grammar.</p>') +
+      '<div class="actions">' +
+        '<a class="btn primary" target="_blank" rel="noopener" href="'+APP+'/play?id='+uuid+'">Play</a>' +
+        '<a class="btn" target="_blank" rel="noopener" href="'+LANDING+'/pages/grammar-viewer.html?type=custom&id='+uuid+'">Cards</a>' +
+        '<a class="btn" target="_blank" rel="noopener" href="'+APP+'/?astroGrammarId='+uuid+'">Astro</a>' +
+      '</div>';
+    return el;
+  }
+  fetch("ids.json").then(r=>r.json()).then(data=>{
+    const ids = data.ids || {};
+    const host = document.getElementById("grammars");
+    host.innerHTML = "";
+    const slugs = Object.keys(ids);
+    if(!slugs.length){ host.innerHTML = '<div class="card"><p class="muted">No grammars yet — add one from recursive.eco.</p></div>'; return; }
+    for(const slug of slugs) host.appendChild(card(slug, ids[slug]));
+  }).catch(()=>{
+    document.getElementById("grammars").innerHTML = '<div class="card"><p class="muted">Grammar list unavailable right now — see the <a href="https://github.com/PlayfulProcess/nara">repo</a>.</p></div>';
+  });
+</script>
+</body>
+</html>
