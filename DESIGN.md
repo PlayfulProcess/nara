@@ -75,6 +75,16 @@ Nara's casting shape follows kali-paradevi's "Charts without doctrine" design di
 - **Reading a chart is contemplation, not lookup.** Meaning renders through the mirror layer and the channel's chosen lenses — short, linked, never a wall of doctrine.
 - Casting shapes are **inferred data shapes, never stored types**, matching the platform's design rule.
 
+### 3a. Today's bridge to the app's astro oracle (interim, no new hosting)
+
+Until the dedicated sky-map caster exists, a Nara grammar already opens in recursive.eco's **astro
+oracle** — the app's existing chart surface — with no extra build. Open a grammar there via
+`https://flow.recursive.eco/?astroGrammarId=<UUID>` (the UUID lives in `ids.json`; the full set of
+per-grammar preview links is in `ids.json` → `_preview_links`). This lets a phone session sit with
+a Nara grammar in an astrological frame now; the true "cast a sky-map" shape above (a time + place
+→ an honest ecliptic map) is the later dedicated build, not this interim link. Recorded so a trip
+session doesn't re-invent access to the astro surface.
+
 ## 4. Where the Trika projects meet
 
 A Nara sky-map and a kali-paradevi draw can eventually share a surface: the same moment viewed subjectively (the ecliptic from your place, Nara) and objectively (what actually sits in that direction — a galaxy, a void, kali-paradevi's paired items). That junction is the Trika metagrammar's reason to exist. Design later; name it now.
